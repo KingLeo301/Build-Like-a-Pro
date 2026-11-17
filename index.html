@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8cf5ce0e5c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="landing-page">
+        <div class="shapes shapes--day" aria-hidden="true">
+            <i class="shape shape--sun fa-solid fa-sun"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+            <i class="shape shape--cloud fa-solid fa-cloud"></i>
+        </div>
+        <div class="shapes shapes--night" aria-hidden="true">
+            <i class="shape shape--moon fa-solid fa-moon"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+            <i class="shape shape--star fa-solid fa-star"></i>
+        </div>
+        <nav>
+            <div class="nav__logos">
+                <figure>
+                    <img id="personal-logo" src="assets/Logo.png" alt="Logo">
+                </figure>
+            </div>
+            <ul class="nav__link--list">
+                <li class="click" onclick="openModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="click">
+                    <a href="#projects" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="click" onclick="openModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li>
+                    <button class="theme__toggle click" onclick="toggleContrast()" aria-label="Toggle dark mode">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <div class="header">
+            <div class="header__content">
+                <h1 class="title"> Hello, </h1>
+                <h1 class="title blue"> I'm Noah! </h1>
+                <p class="header__para"> I'm a <b class="blue click">Frontend Software Engineer </b>with a drive to build web applications and promote great user experiences.<br>Here is more <b class="blue">about me</b>. </p>
+                <div class="social__list">
+                    <a href="#" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/KingLeo301" target="_blank" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social__link click">
+                        <i class="fa-regular fa-file"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="mail__btn click" onclick="openModal()">
+            <i class="fa-regular fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">Here is a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I am a 28-year-old <b class="blue">frontend software engineer</b>. I enjoy completing new projects, and I am not content until my work is done. I make it my business to <b class="blue">take pride in my work</b>, and be sure the customer is satisfied. <br> I am ambitious when it comes to finding new projects, and would be happy to lend my skillset to your team. Please reach out to <b class="blue">find out more</b>.</p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img src="./assets/HTML.png" alt="HTML" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="./assets/CSS.png" alt="CSS" class="modal__language--img">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="./assets/JavaScript.png" alt="JavaScript" class="modal__language--img">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="./assets/React.png" alt="React" class="modal__language--img">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>    
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title" modal__title--contact>
+                    Contact Me
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new opportunities, and would love to hear from you.
+                </h4>
+                <form id="contact__form">
+                    <div class="form__item">
+                        <label class="form__item--label">
+                            Name
+                        </label>
+                        <input type="text" class="input" name="user__name" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">
+                            Email
+                        </label>
+                        <input type="email" class="input" name="user__email" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">
+                            Message
+                        </label>
+                        <textarea class="input" name="message" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way!
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner">
+                    </i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div>
+            <i class="fas fa-times modal__exit click" onclick="closeModal()"></i>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="blue"> projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <img src="./assets/Treact.png" class="project__img" alt="Treact Project screenshot">
+                        <div class="project__description">
+                            <h3 class="project__description--title">Treact Project</h3>
+                            <h4 class="project__description--sub-title">React, Tailwind CSS</h4>
+                            <p class="project__description--para">A modular landing page built with the Treact component library, featuring a hero section, email signup, and trusted-customer showcase.</p>
+                            <div class="project__description--links">
+                                <a href="https://github.com/KingLeo301/Final-Project-Take-2" class="project__description--link click" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project__description--link click" target="_blank">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__wrapper-bg"></div>
+                    </li>
+
+                    <li class="project">
+                        <img src="./assets/Portfolio.png" class="project__img" alt="E-Portfolio screenshot">
+                        <div class="project__description">
+                            <h3 class="project__description--title">E-Portfolio</h3>
+                            <h4 class="project__description--sub-title">HTML, CSS</h4>
+                            <p class="project__description--para">A personal portfolio site introducing myself and my work as a developer.</p>
+                            <div class="project__description--links">
+                                <a href="https://github.com/KingLeo301/E-Portfolio" class="project__description--link click" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project__description--link click" target="_blank">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__wrapper-bg"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure>
+                    <img id="personal-logo" src="assets/Logo.png" alt="Logo">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://github.com/KingLeo301" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
+                    GitHub
+                    </a>
+                    <a href="#" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
+                    LinkedIn
+                    </a>
+                    <a href="#" onclick="openModal(); return false;" class="footer__social--link link__hover-effect link__hover-effect--white">
+                        Contact Me
+                    </a>
+                    <a href="./assets/NoahPriceResume.pdf" target="_blank" rel="noopener noreferrer" class="footer__social--link link__hover-effect link__hover-effect--white">
+                        Resume
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    Copyright &copy; 2026 Noah Price
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "YwoqRibM66CcNbhY0",
+            });
+        })();
+    </script>
+    <script src="./script.js"></script>    
+</body>
+</html>
